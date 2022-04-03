@@ -1,0 +1,35 @@
+plugins {
+    id 'org.springframework.boot' version '2.6.6'
+    id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+    id 'java'
+    id 'org.jetbrains.kotlin.jvm' version "1.5.30"
+}
+
+group = 'cn.maoookai'
+version = '3.0.0-Alpha'
+sourceCompatibility = '17'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+    implementation 'org.springframework.boot:spring-boot-starter-test'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    implementation 'net.mamoe:mirai-core:2.10.1'
+    api 'net.mamoe:mirai-logging-slf4j:2.10.1'
+    implementation group: 'org.slf4j', name: 'slf4j-api', version: '1.7.36'
+    implementation group: 'mysql', name: 'mysql-connector-java', version: '8.0.28'
+    compileOnly group: 'org.projectlombok', name: 'lombok', version: '1.18.22'
+    annotationProcessor "org.springframework.boot:spring-boot-configuration-processor"
+}
+
+tasks.named('test') {
+    useJUnitPlatform()
+}
+
+tasks.named('compileJava') {
+    inputs.files(tasks.named('processResources'))
+}
+
