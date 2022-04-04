@@ -1,12 +1,12 @@
 package cn.maoookai.dami3.log;
 
-import cn.maoookai.dami3.Dami3Application;
+import cn.maoookai.dami3.DamiApplication;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class Log {
 
-    private static final Logger logger = LoggerFactory.getLogger(Dami3Application.class);
+    private static final Logger logger = LoggerFactory.getLogger(DamiApplication.class);
 
     public static void debug(String log) {
         logger.debug(log);

@@ -1,9 +1,8 @@
 package cn.maoookai.dami3.handler;
 
-import cn.maoookai.dami3.log.Log;
 import net.mamoe.mirai.event.EventHandler;
 import net.mamoe.mirai.event.SimpleListenerHost;
-import net.mamoe.mirai.event.events.MessageEvent;
+import net.mamoe.mirai.event.events.GroupMessageEvent;
 import org.jetbrains.annotations.NotNull;
 import org.springframework.stereotype.Component;
 
@@ -11,9 +10,8 @@ import org.springframework.stereotype.Component;
 public class GroupMessageEventHandler extends SimpleListenerHost {
 
     @EventHandler
-    public void onMessage(@NotNull MessageEvent event) {
+    public void onMessage(@NotNull GroupMessageEvent event) {
         String messageContent = event.getMessage().contentToString();
-        Log.info(event.getSender().getId() + messageContent);
     }
 
 }

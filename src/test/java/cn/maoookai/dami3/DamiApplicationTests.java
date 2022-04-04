@@ -4,7 +4,7 @@ import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class Dami3ApplicationTests {
+class DamiApplicationTests {
 
     @Test
     void contextLoads() {

@@ -6,8 +6,8 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 
 @EnableScheduling
 @SpringBootApplication
-public class Dami3Application {
+public class DamiApplication {
     public static void main(String[] args) {
-        SpringApplication.run(Dami3Application.class, args);
+        SpringApplication.run(DamiApplication.class, args);
     }
 }
